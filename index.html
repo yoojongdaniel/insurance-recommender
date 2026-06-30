@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>통계적 보험설계 추천 플랫폼</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>body { font-family: system-ui, sans-serif; }</style>
+</head>
+<body class="bg-gray-50 py-8">
+  <div class="max-w-6xl mx-auto px-4">
+    <h1 class="text-4xl font-bold text-center mb-2 text-indigo-700">통계적 보험설계 추천</h1>
+    <p class="text-center text-gray-600 mb-8">Monte Carlo + Expected Utility 기반 고객 최적 설계</p>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div class="bg-white p-8 rounded-2xl shadow-xl">
+        <h2 class="text-2xl font-semibold mb-6">고객 정보 입력</h2>
+        <div class="space-y-6">
+          <div><label class="block text-sm font-medium mb-1">나이</label><input id="age" type="number" value="35" class="w-full p-3 border rounded-xl"></div>
+          <div><label class="block text-sm font-medium mb-1">연 소득 (만원)</label><input id="income" type="number" value="6000" class="w-full p-3 border rounded-xl"></div>
+          <div><label class="block text-sm font-medium mb-1">부양 가족 수</label><input id="family" type="number" value="2" class="w-full p-3 border rounded-xl"></div>
+          <div><label class="block text-sm font-medium mb-1">위험 선호도 (1: 매우 보수적 ~ 5: 적극적)</label><input id="riskTol" type="range" min="1" max="5" value="2" class="w-full"></div>
+          <button onclick="runAnalysis()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-4 rounded-2xl text-lg font-semibold">분석 및 추천 받기</button>
+        </div>
+      </div>
+
+      <div id="results" class="hidden bg-white p-8 rounded-2xl shadow-xl">
+        <h2 class="text-2xl font-semibold mb-6">추천 결과</h2>
+        <div id="summary" class="mb-8"></div>
+        <canvas id="monteChart" class="mb-8"></canvas>
+        <div id="recommendations" class="space-y-4"></div>
+      </div>
+    </div>
+  </div>
+
+<script>
+// (이전 응답의 전체 <script> 내용 그대로 복사해서 붙여넣기)
+const policies = [ /* ... 전체 policies 배열과 함수들 ... */ ];
+// runAnalysis() 함수까지 전체 script 내용 복사
+</script>
+</body>
+</html>
